@@ -1,0 +1,15 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Trinity AI",
+  "name_for_model": "trinity_ai",
+  "description_for_human": "Chat with Abraham, Moses, and Jesus together—or individually—for wisdom across Testaments.",
+  "description_for_model": "Multi-character AI: Trinity dialogues, individual prophets, with NT/OT/ANE ties.",
+  "auth": {"type": "none"},
+  "api": {
+    "type": "openapi",
+    "url": "http://localhost:5003/openapi.yaml"
+  },
+  "logo_url": "https://your-image-url.com/trinity-icon.png",
+  "contact_email": "nashbean@gmail.com",
+  "legal": {"privacy_policy_url": "https://your-site.com/privacy"}
+}
