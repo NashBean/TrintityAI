@@ -8,8 +8,10 @@ import requests
 import os
 
 # Version
-MAJOR_VERSION = 1
-MINOR_VERSION = 0
+MAJOR_VERSIOM = 0
+MINOR_VERSION = 1
+FIX_VERSION = 1
+VERSION_STRING = f"v{MAJOR_VERSION}.{MINOR_VERSION}.{FIX_VERSION}"
 
 # Voice settings
 VOICE_ON = True
@@ -64,7 +66,7 @@ def get_trinity_response(query):
 def handle_client(client_socket, addr):
     print(f"Connection from {addr}")
     try:
-        welcome = f"TrinityAI Server v{MAJOR_VERSION}.{MINOR_VERSION} - Connected!\nChoose: 1=AbrahamAI 2=MosesAI 3=JesusAI 4=TrinityAI\n> "
+        welcome = f"TrinityAI Server {VERSION_STRING} - Connected!\nChoose: 1=AbrahamAI 2=MosesAI 3=JesusAI 4=TrinityAI\n> "
         client_socket.send(welcome.encode('utf-8'))
 
         current_ai = None
@@ -119,7 +121,7 @@ def main():
     server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server.bind(("0.0.0.0", 12345))
     server.listen(10)
-    print(f"TrinityAI Server v{MAJOR_VERSION}.{MINOR_VERSION} running on port 12345 - Waiting for connections...")
+    print(f"TrinityAI Server {VERSION_STRING} running on port 12345 - Waiting for connections...")
 
     while True:
         try:

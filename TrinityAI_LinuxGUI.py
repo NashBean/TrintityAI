@@ -9,9 +9,11 @@ import requests
 import threading
 import os
 
-# Your perfect version control
-MAJOR_VERSION = 1
-MINOR_VERSION = 0
+# Version
+MAJOR_VERSIOM = 0
+MINOR_VERSION = 1
+FIX_VERSION = 1
+VERSION_STRING = f"v{MAJOR_VERSION}.{MINOR_VERSION}.{FIX_VERSION}"
 
 # History file (in same folder)
 HISTORY_FILE = "trinity_chat_history.txt"
@@ -44,7 +46,7 @@ AI_URLS = {
 class TrinityGUI:
     def __init__(self, root):
         self.root = root
-        self.root.title(f"TrinityAI v{MAJOR_VERSION}.{MINOR_VERSION} - Modular Edition")
+        self.root.title(f"TrinityAI {VERSION_STRING} - Modular Edition")
         self.root.geometry("1100x800")
         self.root.configure(bg="#f0f8ff")
 

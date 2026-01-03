@@ -6,7 +6,8 @@ import os
 
 # Version
 MAJOR_VERSIOM = 0
-MINOR_VERSION = 9
+MINOR_VERSION = 1
+FIX_VERSION = 1
 
 # Toggle voice (default on if espeak installed)
 VOICE_ON = True
